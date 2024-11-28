@@ -1,0 +1,197 @@
+Nov 12 08:41:05 kirabox lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=112) by (uid=0)
+Nov 12 08:41:05 kirabox systemd-logind[787]: New session c1 of user lightdm.
+Nov 12 08:41:05 kirabox systemd: pam_unix(systemd-user:session): session opened for user lightdm(uid=112) by (uid=0)
+Nov 12 08:41:05 kirabox lightdm: gkr-pam: gnome-keyring-daemon started properly
+Nov 12 08:41:06 kirabox lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "kira"
+Nov 12 08:43:52 kirabox lightdm: gkr-pam: unable to locate daemon control file
+Nov 12 08:43:52 kirabox lightdm: gkr-pam: stashed password to try later in open session
+Nov 12 08:43:53 kirabox lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Nov 12 08:43:53 kirabox lightdm: pam_unix(lightdm:session): session opened for user kira(uid=1000) by (uid=0)
+Nov 12 08:43:53 kirabox systemd-logind[787]: Removed session c1.
+Nov 12 08:43:53 kirabox systemd-logind[787]: New session c2 of user kira.
+Nov 12 08:43:53 kirabox systemd: pam_unix(systemd-user:session): session opened for user kira(uid=1000) by (uid=0)
+Nov 12 08:43:53 kirabox lightdm: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Nov 12 08:43:56 kirabox polkitd(authority=local): Registered Authentication Agent for unix-session:c2 (system bus name :1.73 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale ar_TN.UTF-8)
+Nov 12 08:54:20 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Nov 12 08:54:20 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 08:54:20 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 08:54:20 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+Nov 12 08:54:20 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 08:54:39 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 09:00:01 kirabox CRON[8247]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 09:00:01 kirabox CRON[8247]: pam_unix(cron:session): session closed for user root
+Nov 12 09:17:01 kirabox CRON[8507]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 09:17:01 kirabox CRON[8507]: pam_unix(cron:session): session closed for user root
+Nov 12 09:30:01 kirabox CRON[8697]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 09:30:01 kirabox CRON[8697]: pam_unix(cron:session): session closed for user root
+Nov 12 09:39:53 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Nov 12 09:39:53 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 09:39:53 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 09:55:46 kirabox systemd-logind[787]: Operation 'sleep' finished.
+Nov 12 09:55:57 kirabox cinnamon-screensaver-pam-helper: gkr-pam: unlocked login keyring
+Nov 12 10:00:01 kirabox CRON[9834]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 10:00:02 kirabox CRON[9834]: pam_unix(cron:session): session closed for user root
+Nov 12 10:17:01 kirabox CRON[11061]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 10:17:01 kirabox CRON[11061]: pam_unix(cron:session): session closed for user root
+Nov 12 10:18:15 kirabox systemd-logind[787]: Power key pressed.
+Nov 12 14:56:27 kirabox systemd-logind[787]: Operation 'sleep' finished.
+Nov 12 14:56:57 kirabox cinnamon-screensaver-pam-helper: pam_unix(cinnamon-screensaver:auth): conversation failed
+Nov 12 14:56:57 kirabox cinnamon-screensaver-pam-helper: pam_unix(cinnamon-screensaver:auth): auth could not identify password for [kira]
+Nov 12 14:57:06 kirabox cinnamon-screensaver-pam-helper: gkr-pam: unlocked login keyring
+Nov 12 14:57:46 kirabox sudo:     kira : TTY=pts/0 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/docker images
+Nov 12 14:57:47 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 14:57:47 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:00:01 kirabox CRON[12007]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 15:00:01 kirabox CRON[12007]: pam_unix(cron:session): session closed for user root
+Nov 12 15:05:24 kirabox sudo:     kira : TTY=pts/0 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/docker run --rm -ti ghcr.io/mlflow/mlflow bash
+Nov 12 15:05:24 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:05:30 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:05:39 kirabox sudo:     kira : TTY=pts/0 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/docker run --rm -ti ghcr.io/mlflow/mlflow:v2.17.0rc0 bash
+Nov 12 15:05:39 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:06:39 kirabox gnome-keyring-daemon[1656]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Nov 12 15:07:11 kirabox sudo:     kira : TTY=pts/2 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/code
+Nov 12 15:07:11 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:07:11 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:07:53 kirabox sudo:     kira : TTY=pts/2 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/code
+Nov 12 15:07:53 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:07:53 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:08:21 kirabox gnome-keyring-daemon[1656]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Nov 12 15:12:10 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:12:10 kirabox pkexec[18019]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 750 -b firmware -b platform -b raw]
+Nov 12 15:12:11 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:12:11 kirabox pkexec[18032]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 7500 -b firmware -b platform -b raw]
+Nov 12 15:17:01 kirabox CRON[20288]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 15:17:01 kirabox CRON[20288]: pam_unix(cron:session): session closed for user root
+Nov 12 15:17:05 kirabox sudo:     kira : TTY=pts/2 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/sbin/usermod -aG docker kira
+Nov 12 15:17:05 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:17:05 kirabox usermod[20311]: add 'kira' to group 'docker'
+Nov 12 15:17:05 kirabox usermod[20311]: add 'kira' to shadow group 'docker'
+Nov 12 15:17:05 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:17:11 kirabox newgrp[20358]: user 'kira' (login 'kira' on pts/2) switched to group 'docker'
+Nov 12 15:17:36 kirabox newgrp[20358]: user 'kira' (login 'kira' on pts/2) returned to group 'kira'
+Nov 12 15:21:46 kirabox gnome-keyring-daemon[1656]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Nov 12 15:22:12 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:22:23 kirabox polkitd(authority=local): Unregistered Authentication Agent for unix-session:c2 (system bus name :1.73, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale ar_TN.UTF-8) (disconnected from bus)
+Nov 12 15:22:26 kirabox lightdm: pam_unix(lightdm:session): session closed for user kira
+Nov 12 15:22:26 kirabox systemd-logind[787]: Session c2 logged out. Waiting for processes to exit.
+Nov 12 15:22:30 kirabox lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=112) by (uid=0)
+Nov 12 15:22:30 kirabox systemd-logind[787]: New session c3 of user lightdm.
+Nov 12 15:22:30 kirabox systemd: pam_unix(systemd-user:session): session opened for user lightdm(uid=112) by (uid=0)
+Nov 12 15:22:30 kirabox lightdm: gkr-pam: gnome-keyring-daemon started properly
+Nov 12 15:22:31 kirabox lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "kira"
+Nov 12 15:22:33 kirabox lightdm: gkr-pam: unable to locate daemon control file
+Nov 12 15:22:33 kirabox lightdm: gkr-pam: stashed password to try later in open session
+Nov 12 15:22:33 kirabox lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Nov 12 15:22:33 kirabox lightdm: pam_unix(lightdm:session): session opened for user kira(uid=1000) by (uid=0)
+Nov 12 15:22:33 kirabox systemd-logind[787]: Removed session c3.
+Nov 12 15:22:33 kirabox systemd-logind[787]: New session c4 of user kira.
+Nov 12 15:22:33 kirabox lightdm: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Nov 12 15:22:37 kirabox polkitd(authority=local): Registered Authentication Agent for unix-session:c4 (system bus name :1.280 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale ar_TN.UTF-8)
+Nov 12 15:22:56 kirabox gnome-keyring-daemon[23260]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Nov 12 15:23:22 kirabox sudo:     kira : TTY=pts/2 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/docker ps
+Nov 12 15:23:22 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:23:22 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:24:04 kirabox sudo:     kira : TTY=pts/2 ; PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/docker run --rm -p 5000:5000 -ti ghcr.io/mlflow/mlflow:v2.17.0rc0 bash
+Nov 12 15:24:04 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:29:51 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:29:51 kirabox pkexec[29174]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 750 -b firmware -b platform -b raw]
+Nov 12 15:29:52 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:29:52 kirabox pkexec[29186]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 7500 -b firmware -b platform -b raw]
+Nov 12 15:30:01 kirabox CRON[29232]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 15:30:01 kirabox CRON[29232]: pam_unix(cron:session): session closed for user root
+Nov 12 15:30:53 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:30:53 kirabox pkexec[29435]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 750 -b firmware -b platform -b raw]
+Nov 12 15:30:54 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:30:54 kirabox pkexec[29448]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 7500 -b firmware -b platform -b raw]
+Nov 12 15:33:11 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Nov 12 15:33:11 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:33:11 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:33:11 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+Nov 12 15:33:11 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:33:37 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 15:39:14 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:39:14 kirabox pkexec[31438]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 750 -b firmware -b platform -b raw]
+Nov 12 15:39:16 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:39:16 kirabox pkexec[31442]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 7500 -b firmware -b platform -b raw]
+Nov 12 15:40:22 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:40:22 kirabox pkexec[31452]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 750 -b firmware -b platform -b raw]
+Nov 12 15:40:26 kirabox pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 15:40:26 kirabox pkexec[31456]: kira: Executing command [USER=root] [TTY=unknown] [CWD=/home/kira] [COMMAND=/usr/libexec/csd-backlight-helper --set-brightness 7500 -b firmware -b platform -b raw]
+Nov 12 16:00:01 kirabox CRON[31843]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 16:00:02 kirabox CRON[31843]: pam_unix(cron:session): session closed for user root
+Nov 12 16:03:19 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 16:04:06 kirabox polkitd(authority=local): Unregistered Authentication Agent for unix-session:c4 (system bus name :1.280, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale ar_TN.UTF-8) (disconnected from bus)
+Nov 12 16:04:08 kirabox systemd-logind[787]: System is powering down.
+Nov 12 17:18:18 kirabox systemd-logind[756]: New seat seat0.
+Nov 12 17:18:18 kirabox systemd-logind[756]: Watching system buttons on /dev/input/event3 (Power Button)
+Nov 12 17:18:18 kirabox systemd-logind[756]: Watching system buttons on /dev/input/event0 (Lid Switch)
+Nov 12 17:18:18 kirabox systemd-logind[756]: Watching system buttons on /dev/input/event2 (Power Button)
+Nov 12 17:18:18 kirabox systemd-logind[756]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Nov 12 17:18:18 kirabox systemd-logind[756]: Watching system buttons on /dev/input/event4 (AT Translated Set 2 keyboard)
+Nov 12 17:18:23 kirabox lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=112) by (uid=0)
+Nov 12 17:18:23 kirabox systemd-logind[756]: New session c1 of user lightdm.
+Nov 12 17:18:23 kirabox systemd: pam_unix(systemd-user:session): session opened for user lightdm(uid=112) by (uid=0)
+Nov 12 17:18:23 kirabox lightdm: gkr-pam: gnome-keyring-daemon started properly
+Nov 12 17:18:24 kirabox lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "kira"
+Nov 12 17:18:28 kirabox lightdm: gkr-pam: unable to locate daemon control file
+Nov 12 17:18:28 kirabox lightdm: gkr-pam: stashed password to try later in open session
+Nov 12 17:18:28 kirabox lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Nov 12 17:18:28 kirabox lightdm: pam_unix(lightdm:session): session opened for user kira(uid=1000) by (uid=0)
+Nov 12 17:18:28 kirabox systemd-logind[756]: Removed session c1.
+Nov 12 17:18:28 kirabox systemd-logind[756]: New session c2 of user kira.
+Nov 12 17:18:28 kirabox systemd: pam_unix(systemd-user:session): session opened for user kira(uid=1000) by (uid=0)
+Nov 12 17:18:28 kirabox lightdm: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Nov 12 17:18:31 kirabox polkitd(authority=local): Registered Authentication Agent for unix-session:c2 (system bus name :1.71 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale ar_TN.UTF-8)
+Nov 12 17:28:55 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Nov 12 17:28:55 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 17:28:55 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 17:28:55 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+Nov 12 17:28:55 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 17:29:05 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 17:30:01 kirabox CRON[5989]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 17:30:01 kirabox CRON[5989]: pam_unix(cron:session): session closed for user root
+Nov 12 18:00:01 kirabox CRON[7335]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 18:00:01 kirabox CRON[7335]: pam_unix(cron:session): session closed for user root
+Nov 12 18:17:01 kirabox CRON[7812]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 18:17:01 kirabox CRON[7812]: pam_unix(cron:session): session closed for user root
+Nov 12 18:30:01 kirabox CRON[8131]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 18:30:01 kirabox CRON[8131]: pam_unix(cron:session): session closed for user root
+Nov 12 19:00:01 kirabox CRON[8828]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 19:00:01 kirabox CRON[8828]: pam_unix(cron:session): session closed for user root
+Nov 12 19:17:01 kirabox CRON[9168]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 19:17:01 kirabox CRON[9168]: pam_unix(cron:session): session closed for user root
+Nov 12 19:29:05 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Nov 12 19:29:05 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 19:29:05 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 19:29:05 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+Nov 12 19:29:05 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 19:29:17 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 19:30:01 kirabox CRON[9863]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 19:30:01 kirabox CRON[9863]: pam_unix(cron:session): session closed for user root
+Nov 12 20:00:01 kirabox CRON[11267]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 20:00:01 kirabox CRON[11267]: pam_unix(cron:session): session closed for user root
+Nov 12 20:17:01 kirabox CRON[11721]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 20:17:01 kirabox CRON[11721]: pam_unix(cron:session): session closed for user root
+Nov 12 20:30:01 kirabox CRON[11904]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 20:30:01 kirabox CRON[11904]: pam_unix(cron:session): session closed for user root
+Nov 12 21:00:01 kirabox CRON[12493]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 21:00:02 kirabox CRON[12493]: pam_unix(cron:session): session closed for user root
+Nov 12 21:17:01 kirabox CRON[12756]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 21:17:01 kirabox CRON[12756]: pam_unix(cron:session): session closed for user root
+Nov 12 21:29:17 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+Nov 12 21:29:17 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 21:29:17 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 21:29:17 kirabox sudo:     kira : PWD=/home/kira ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+Nov 12 21:29:17 kirabox sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Nov 12 21:29:32 kirabox sudo: pam_unix(sudo:session): session closed for user root
+Nov 12 21:30:01 kirabox CRON[13346]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 21:30:01 kirabox CRON[13346]: pam_unix(cron:session): session closed for user root
+Nov 12 22:00:01 kirabox CRON[13551]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 22:00:01 kirabox CRON[13551]: pam_unix(cron:session): session closed for user root
+Nov 12 22:17:01 kirabox CRON[13909]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 22:17:01 kirabox CRON[13909]: pam_unix(cron:session): session closed for user root
+Nov 12 22:30:01 kirabox CRON[13972]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Nov 12 22:30:01 kirabox CRON[13972]: pam_unix(cron:session): session closed for user root
+Nov 12 22:39:40 kirabox polkitd(authority=local): Unregistered Authentication Agent for unix-session:c2 (system bus name :1.71, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale ar_TN.UTF-8) (disconnected from bus)
+Nov 12 22:39:42 kirabox systemd-logind[756]: System is powering down.
+

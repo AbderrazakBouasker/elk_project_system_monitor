@@ -1,0 +1,208 @@
+Nov 12 08:41:00 kirabox systemd[1]: rsyslog.service: Sent signal SIGHUP to main process 776 (rsyslogd) on client request.
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.776820588+01:00" level=info msg="loading plugin \"io.containerd.gc.v1.scheduler\"..." type=io.containerd.gc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.776904666+01:00" level=info msg="loading plugin \"io.containerd.differ.v1.walking\"..." type=io.containerd.differ.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.776934454+01:00" level=info msg="loading plugin \"io.containerd.lease.v1.manager\"..." type=io.containerd.lease.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.776958895+01:00" level=info msg="loading plugin \"io.containerd.streaming.v1.manager\"..." type=io.containerd.streaming.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.776986697+01:00" level=info msg="loading plugin \"io.containerd.runtime.v1.linux\"..." type=io.containerd.runtime.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.777066819+01:00" level=info msg="loading plugin \"io.containerd.monitor.v1.cgroups\"..." type=io.containerd.monitor.v1
+Nov 12 08:41:00 kirabox systemd[1]: logrotate.service: Deactivated successfully.
+Nov 12 08:41:00 kirabox systemd[1]: Finished Rotate log files.
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781214887+01:00" level=info msg="loading plugin \"io.containerd.runtime.v2.task\"..." type=io.containerd.runtime.v2
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781346011+01:00" level=info msg="loading plugin \"io.containerd.runtime.v2.shim\"..." type=io.containerd.runtime.v2
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781370116+01:00" level=info msg="loading plugin \"io.containerd.sandbox.store.v1.local\"..." type=io.containerd.sandbox.store.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781393190+01:00" level=info msg="loading plugin \"io.containerd.sandbox.controller.v1.local\"..." type=io.containerd.sandbox.controller.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781417211+01:00" level=info msg="loading plugin \"io.containerd.service.v1.containers-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781447527+01:00" level=info msg="loading plugin \"io.containerd.service.v1.content-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781470668+01:00" level=info msg="loading plugin \"io.containerd.service.v1.diff-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781493079+01:00" level=info msg="loading plugin \"io.containerd.service.v1.images-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781513923+01:00" level=info msg="loading plugin \"io.containerd.service.v1.introspection-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781536911+01:00" level=info msg="loading plugin \"io.containerd.service.v1.namespaces-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781570251+01:00" level=info msg="loading plugin \"io.containerd.service.v1.snapshots-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781590874+01:00" level=info msg="loading plugin \"io.containerd.service.v1.tasks-service\"..." type=io.containerd.service.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781645326+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.containers\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781669386+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.content\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781690281+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.diff\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781710268+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.events\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781738282+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.images\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781770131+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.introspection\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781791275+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.leases\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781811562+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.namespaces\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781833752+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.sandbox-controllers\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781857223+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.sandboxes\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781876232+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.snapshots\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781895981+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.streaming\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781913908+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.tasks\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781937899+01:00" level=info msg="loading plugin \"io.containerd.transfer.v1.local\"..." type=io.containerd.transfer.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781968730+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.transfer\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.781992056+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.version\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.782009799+01:00" level=info msg="loading plugin \"io.containerd.internal.v1.restart\"..." type=io.containerd.internal.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.784908211+01:00" level=info msg="loading plugin \"io.containerd.tracing.processor.v1.otlp\"..." type=io.containerd.tracing.processor.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.784950670+01:00" level=info msg="skip loading plugin \"io.containerd.tracing.processor.v1.otlp\"..." error="skip plugin: tracing endpoint not configured" type=io.containerd.tracing.processor.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.784971786+01:00" level=info msg="loading plugin \"io.containerd.internal.v1.tracing\"..." type=io.containerd.internal.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.784992173+01:00" level=info msg="skip loading plugin \"io.containerd.internal.v1.tracing\"..." error="skip plugin: tracing endpoint not configured" type=io.containerd.internal.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.785007967+01:00" level=info msg="loading plugin \"io.containerd.grpc.v1.healthcheck\"..." type=io.containerd.grpc.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.785037001+01:00" level=info msg="loading plugin \"io.containerd.nri.v1.nri\"..." type=io.containerd.nri.v1
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.785058096+01:00" level=info msg="NRI interface is disabled by configuration."
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.787708369+01:00" level=info msg=serving... address=/run/containerd/containerd.sock.ttrpc
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.787774171+01:00" level=info msg=serving... address=/run/containerd/containerd.sock
+Nov 12 08:41:00 kirabox containerd[887]: time="2024-11-12T08:41:00.787969522+01:00" level=info msg="containerd successfully booted in 0.087873s"
+Nov 12 08:41:00 kirabox systemd[1]: Started containerd container runtime.
+Nov 12 08:41:01 kirabox avahi-daemon[748]: Server startup complete. Host name is kirabox.local. Local service cookie is 3586506719.
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8293] policy: auto-activating connection 'TOPNET61F33269' (162d05ce-410c-47a8-bc1f-9a74cace3ef9)
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8321] device (wlxd06f4a2efb90): Activation: starting connection 'TOPNET61F33269' (162d05ce-410c-47a8-bc1f-9a74cace3ef9)
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8325] device (wlxd06f4a2efb90): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8336] manager: NetworkManager state is now CONNECTING
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8344] device (wlxd06f4a2efb90): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8353] device (wlxd06f4a2efb90): Activation: (wifi) access point 'TOPNET61F33269' has security, but secrets are required.
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8354] device (wlxd06f4a2efb90): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8401] device (wlxd06f4a2efb90): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8414] device (wlxd06f4a2efb90): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8425] device (wlxd06f4a2efb90): Activation: (wifi) connection 'TOPNET61F33269' has security, and secrets exist.  No new secrets needed.
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8428] Config: added 'ssid' value 'TOPNET61F33269'
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8429] Config: added 'scan_ssid' value '1'
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8430] Config: added 'bgscan' value 'simple:30:-70:86400'
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8430] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256 FT-PSK SAE FT-SAE'
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8431] Config: added 'auth_alg' value 'OPEN'
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8432] Config: added 'psk' value '<hidden>'
+Nov 12 08:41:01 kirabox acpid: client connected from 942[0:0]
+Nov 12 08:41:01 kirabox acpid: 1 client rule loaded
+Nov 12 08:41:01 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: SME: Trying to authenticate with 10:b1:f8:cb:97:8c (SSID='TOPNET61F33269' freq=2462 MHz)
+Nov 12 08:41:01 kirabox kernel: [   19.800511] wlxd06f4a2efb90: authenticate with 10:b1:f8:cb:97:8c
+Nov 12 08:41:01 kirabox kernel: [   19.809957] wlxd06f4a2efb90: send auth to 10:b1:f8:cb:97:8c (try 1/3)
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8811] device (wlxd06f4a2efb90): supplicant interface state: disconnected -> authenticating
+Nov 12 08:41:01 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: Trying to associate with 10:b1:f8:cb:97:8c (SSID='TOPNET61F33269' freq=2462 MHz)
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.8826] device (wlxd06f4a2efb90): supplicant interface state: authenticating -> associating
+Nov 12 08:41:01 kirabox kernel: [   19.811367] wlxd06f4a2efb90: authenticated
+Nov 12 08:41:01 kirabox kernel: [   19.818450] wlxd06f4a2efb90: associate with 10:b1:f8:cb:97:8c (try 1/3)
+Nov 12 08:41:01 kirabox kernel: [   19.822230] wlxd06f4a2efb90: RX AssocResp from 10:b1:f8:cb:97:8c (capab=0x431 status=0 aid=3)
+Nov 12 08:41:01 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: Associated with 10:b1:f8:cb:97:8c
+Nov 12 08:41:01 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+Nov 12 08:41:01 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=TN
+Nov 12 08:41:01 kirabox kernel: [   19.825175] wlxd06f4a2efb90: associated
+Nov 12 08:41:01 kirabox kernel: [   19.825252] ath: EEPROM regdomain: 0x8314
+Nov 12 08:41:01 kirabox kernel: [   19.825255] ath: EEPROM indicates we should expect a country code
+Nov 12 08:41:01 kirabox kernel: [   19.825257] ath: doing EEPROM country->regdmn map search
+Nov 12 08:41:01 kirabox kernel: [   19.825258] ath: country maps to regdmn code: 0x36
+Nov 12 08:41:01 kirabox kernel: [   19.825259] ath: Country alpha2 being used: TN
+Nov 12 08:41:01 kirabox kernel: [   19.825260] ath: Regpair used: 0x36
+Nov 12 08:41:01 kirabox kernel: [   19.825261] ath: regdomain 0x8314 dynamically updated by country element
+Nov 12 08:41:01 kirabox NetworkManager[758]: <info>  [1731397261.9016] device (wlxd06f4a2efb90): supplicant interface state: associating -> associated
+Nov 12 08:41:02 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: WPA: Key negotiation completed with 10:b1:f8:cb:97:8c [PTK=CCMP GTK=CCMP]
+Nov 12 08:41:02 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: CTRL-EVENT-CONNECTED - Connection to 10:b1:f8:cb:97:8c completed [id=0 id_str=]
+Nov 12 08:41:02 kirabox kernel: [   20.192343] IPv6: ADDRCONF(NETDEV_CHANGE): wlxd06f4a2efb90: link becomes ready
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.2661] device (wlxd06f4a2efb90): supplicant interface state: associated -> completed
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.2663] device (wlxd06f4a2efb90): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "TOPNET61F33269"
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.2667] device (wlxd06f4a2efb90): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.2683] dhcp4 (wlxd06f4a2efb90): activation: beginning transaction (timeout in 45 seconds)
+Nov 12 08:41:02 kirabox wpa_supplicant[803]: wlxd06f4a2efb90: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-37 noise=9999 txrate=1000
+Nov 12 08:41:02 kirabox avahi-daemon[748]: Joining mDNS multicast group on interface wlxd06f4a2efb90.IPv6 with address fe80::5a8b:f87f:8266:9fc.
+Nov 12 08:41:02 kirabox avahi-daemon[748]: New relevant interface wlxd06f4a2efb90.IPv6 for mDNS.
+Nov 12 08:41:02 kirabox avahi-daemon[748]: Registering new address record for fe80::5a8b:f87f:8266:9fc on wlxd06f4a2efb90.*.
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3229] dhcp4 (wlxd06f4a2efb90): state changed new lease, address=192.168.1.7
+Nov 12 08:41:02 kirabox avahi-daemon[748]: Joining mDNS multicast group on interface wlxd06f4a2efb90.IPv4 with address 192.168.1.7.
+Nov 12 08:41:02 kirabox avahi-daemon[748]: New relevant interface wlxd06f4a2efb90.IPv4 for mDNS.
+Nov 12 08:41:02 kirabox avahi-daemon[748]: Registering new address record for 192.168.1.7 on wlxd06f4a2efb90.IPv4.
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3247] device (wlxd06f4a2efb90): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3281] device (wlxd06f4a2efb90): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3284] device (wlxd06f4a2efb90): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3288] manager: NetworkManager state is now CONNECTED_LOCAL
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3293] manager: NetworkManager state is now CONNECTED_SITE
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3294] policy: set 'TOPNET61F33269' (wlxd06f4a2efb90) as default for IPv4 routing and DNS
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3300] device (wlxd06f4a2efb90): Activation: successful, device activated.
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.3306] manager: startup complete
+Nov 12 08:41:02 kirabox systemd-resolved[722]: wlxd06f4a2efb90: Bus client set default route setting: yes
+Nov 12 08:41:02 kirabox systemd[1]: Finished Network Manager Wait Online.
+Nov 12 08:41:02 kirabox systemd[1]: Reached target Network is Online.
+Nov 12 08:41:02 kirabox systemd-resolved[722]: wlxd06f4a2efb90: Bus client set DNS server list to: 192.168.1.1
+Nov 12 08:41:02 kirabox systemd[1]: Started Make remote CUPS printers available locally.
+Nov 12 08:41:02 kirabox systemd[1]: Starting Docker Application Container Engine...
+Nov 12 08:41:02 kirabox systemd[1]: Starting Tool to automatically collect and submit kernel crash signatures...
+Nov 12 08:41:02 kirabox systemd[1]: Starting LSB: VirtualBox Linux kernel module...
+Nov 12 08:41:02 kirabox systemd[1]: kerneloops.service: Found left-over process 1033 (kerneloops) in control group while starting unit. Ignoring.
+Nov 12 08:41:02 kirabox systemd[1]: This usually indicates unclean termination of a previous run, or service implementation deficiencies.
+Nov 12 08:41:02 kirabox systemd[1]: Started Tool to automatically collect and submit kernel crash signatures.
+Nov 12 08:41:02 kirabox virtualbox[1030]:  * Loading VirtualBox kernel modules...
+Nov 12 08:41:02 kirabox kernel: [   20.341571] vboxdrv: Found 4 processor cores
+Nov 12 08:41:02 kirabox kernel: [   20.359901] vboxdrv: TSC mode is Invariant, tentative frequency 2711998837 Hz
+Nov 12 08:41:02 kirabox kernel: [   20.359905] vboxdrv: Successfully loaded version 6.1.50_Ubuntu r161033 (interface 0x00320000)
+Nov 12 08:41:02 kirabox kernel: [   20.371941] VBoxNetFlt: Successfully started.
+Nov 12 08:41:02 kirabox virtualbox[1030]:    ...done.
+Nov 12 08:41:02 kirabox systemd[1]: Started LSB: VirtualBox Linux kernel module.
+Nov 12 08:41:02 kirabox kernel: [   20.382422] VBoxNetAdp: Successfully started.
+Nov 12 08:41:02 kirabox NetworkManager[758]: <info>  [1731397262.6520] manager: NetworkManager state is now CONNECTED_GLOBAL
+Nov 12 08:41:02 kirabox dockerd[1027]: time="2024-11-12T08:41:02.712186211+01:00" level=info msg="Starting up"
+Nov 12 08:41:02 kirabox dockerd[1027]: time="2024-11-12T08:41:02.717204360+01:00" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+Nov 12 08:41:02 kirabox dockerd[1027]: time="2024-11-12T08:41:02.903054915+01:00" level=info msg="[graphdriver] using prior storage driver: overlay2"
+Nov 12 08:41:02 kirabox ModemManager[874]: <info>  [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3': not supported by any plugin
+Nov 12 08:41:02 kirabox ModemManager[874]: <info>  [base-manager] couldn't check support for device '/sys/devices/pci0000:00/0000:00:1c.5/0000:02:00.0': not supported by any plugin
+Nov 12 08:41:03 kirabox dockerd[1027]: time="2024-11-12T08:41:03.260742692+01:00" level=info msg="Loading containers: start."
+Nov 12 08:41:03 kirabox kernel: [   21.556494] Initializing XFRM netlink socket
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.6827] manager: (docker0): new Bridge device (/org/freedesktop/NetworkManager/Devices/5)
+Nov 12 08:41:03 kirabox systemd-udevd[417]: Using default interface naming scheme 'v249'.
+Nov 12 08:41:03 kirabox kernel: [   21.610534] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+Nov 12 08:41:03 kirabox avahi-daemon[748]: Joining mDNS multicast group on interface docker0.IPv4 with address 172.17.0.1.
+Nov 12 08:41:03 kirabox avahi-daemon[748]: New relevant interface docker0.IPv4 for mDNS.
+Nov 12 08:41:03 kirabox avahi-daemon[748]: Registering new address record for 172.17.0.1 on docker0.IPv4.
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8142] device (docker0): state change: unmanaged -> unavailable (reason 'connection-assumed', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8149] device (docker0): state change: unavailable -> disconnected (reason 'connection-assumed', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8160] device (docker0): Activation: starting connection 'docker0' (5ff46909-51fe-4e29-9032-f5ea2f8c9991)
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8164] device (docker0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8169] device (docker0): state change: prepare -> config (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8175] device (docker0): state change: config -> ip-config (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8187] manager: (br-78bf22d180c1): new Bridge device (/org/freedesktop/NetworkManager/Devices/6)
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8193] device (docker0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8214] device (docker0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8217] device (docker0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.8222] device (docker0): Activation: successful, device activated.
+Nov 12 08:41:03 kirabox avahi-daemon[748]: Joining mDNS multicast group on interface br-78bf22d180c1.IPv4 with address 172.18.0.1.
+Nov 12 08:41:03 kirabox avahi-daemon[748]: New relevant interface br-78bf22d180c1.IPv4 for mDNS.
+Nov 12 08:41:03 kirabox avahi-daemon[748]: Registering new address record for 172.18.0.1 on br-78bf22d180c1.IPv4.
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9174] device (br-78bf22d180c1): state change: unmanaged -> unavailable (reason 'connection-assumed', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9190] device (br-78bf22d180c1): state change: unavailable -> disconnected (reason 'connection-assumed', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9213] device (br-78bf22d180c1): Activation: starting connection 'br-78bf22d180c1' (c4f68c29-c240-4ef1-b9d8-a4db67784315)
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9221] device (br-78bf22d180c1): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9230] device (br-78bf22d180c1): state change: prepare -> config (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9236] device (br-78bf22d180c1): state change: config -> ip-config (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9245] device (br-78bf22d180c1): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9279] device (br-78bf22d180c1): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9285] device (br-78bf22d180c1): state change: secondaries -> activated (reason 'none', sys-iface-state: 'external')
+Nov 12 08:41:03 kirabox NetworkManager[758]: <info>  [1731397263.9298] device (br-78bf22d180c1): Activation: successful, device activated.
+Nov 12 08:41:04 kirabox avahi-daemon[748]: Leaving mDNS multicast group on interface wlxd06f4a2efb90.IPv6 with address fe80::5a8b:f87f:8266:9fc.
+Nov 12 08:41:04 kirabox avahi-daemon[748]: Joining mDNS multicast group on interface wlxd06f4a2efb90.IPv6 with address fd10:b1f8:cb97:8600:4539:5bd0:cdd4:8092.
+Nov 12 08:41:04 kirabox avahi-daemon[748]: Registering new address record for fd10:b1f8:cb97:8600:4539:5bd0:cdd4:8092 on wlxd06f4a2efb90.*.
+Nov 12 08:41:04 kirabox avahi-daemon[748]: Withdrawing address record for fe80::5a8b:f87f:8266:9fc on wlxd06f4a2efb90.
+Nov 12 08:41:04 kirabox dockerd[1027]: time="2024-11-12T08:41:04.285562459+01:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Nov 12 08:41:04 kirabox systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Nov 12 08:41:04 kirabox dockerd[1027]: time="2024-11-12T08:41:04.453557399+01:00" level=info msg="Loading containers: done."
+Nov 12 08:41:04 kirabox dockerd[1027]: time="2024-11-12T08:41:04.481762684+01:00" level=warning msg="WARNING: bridge-nf-call-iptables is disabled"
+Nov 12 08:41:04 kirabox dockerd[1027]: time="2024-11-12T08:41:04.481821324+01:00" level=warning msg="WARNING: bridge-nf-call-ip6tables is disabled"
+Nov 12 08:41:04 kirabox dockerd[1027]: time="2024-11-12T08:41:04.481873987+01:00" level=info msg="Docker daemon" commit=41ca978 containerd-snapshotter=false storage-driver=overlay2 version=27.3.1
+Nov 12 08:41:04 kirabox dockerd[1027]: time="2024-11-12T08:41:04.482587865+01:00" level=info msg="Daemon has completed initialization"
+Nov 12 08:41:04 kirabox systemd[1]: Started Docker Application Container Engine.
+Nov 12 08:41:04 kirabox dockerd[1027]: time="2024-11-12T08:41:04.565728099+01:00" level=info msg="API listen on /run/docker.sock"
+Nov 12 08:41:04 kirabox systemd[1]: Reached target Multi-User System.
+Nov 12 08:41:04 kirabox systemd[1]: Reached target Graphical Interface.
+Nov 12 08:41:04 kirabox systemd[1]: Starting casper-md5check Verify Live ISO checksums...
+Nov 12 08:41:04 kirabox systemd[1]: Starting Record Runlevel Change in UTMP...
+Nov 12 08:41:04 kirabox casper-md5check[1508]: .fopen md5_file: No such file or directory
+Nov 12 08:41:04 kirabox casper-md5check[1508]: Checking integrity, this may take some time (or try: fsck.mode=skip)
+Nov 12 08:41:04 kirabox systemd[1]: casper-md5check.service: Main process exited, code=exited, status=1/FAILURE
+Nov 12 08:41:04 kirabox systemd[1]: casper-md5check.service: Failed with result 'exit-code'.
+Nov 12 08:41:04 kirabox systemd[1]: Failed to start casper-md5check Verify Live ISO checksums.
+Nov 12 08:41:04 kirabox systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
+Nov 12 08:41:04 kirabox systemd[1]: Finished Record Runlevel Change in UTMP.
+Nov 12 08:41:04 kirabox systemd[1]: Startup finished in 4.675s (firmware) + 8.653s (loader) + 4.991s (kernel) + 17.511s (userspace) = 35.832s.
+Nov 12 08:41:04 kirabox thermald[790]: Manufacturer didn't provide adequate support to run in
+Nov 12 08:41:04 kirabox thermald[790]: optimized configuration on Linux with open source
+Nov 12 08:41:04 kirabox thermald[790]: You may want to disable thermald on this system if you see issue
+Nov 12 08:41:04 kirabox thermald[790]: Unable to find a sensor for \_SB_.PCI0.LPCB.EC0_.SEN1
+Nov 12 08:41:04 kirabox systemd[1]: dmesg.service: Deactivated successfully.
+Nov 12 08:41:05 kirabox systemd[1]: Created slice User Slice of UID 112.
+Nov 12 08:41:05 kirabox systemd[1]: Starting User Runtime Directory /run/user/112...
+Nov 12 08:41:05 kirabox systemd[1]: Finished User Runtime Directory /run/user/112.
+Nov 12 08:41:05 kirabox systemd[1]: Starting User Manager for UID 112...
+Nov 12 08:41:05 kirabox systemd[1536]: Queued start job for default target Main User Target.
+Nov 12 08:41:05 kirabox systemd[1536]: Created slice User Application Slice.
+Nov 12 08:41:05 kirabox systemd[1536]: Created slice User Core Session Slice.
+Nov 12 08:41:05 kirabox systemd[1536]: Reached target Paths.
+
