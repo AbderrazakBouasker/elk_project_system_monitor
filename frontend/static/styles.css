@@ -83,3 +83,43 @@ li div {
     background-color: #cccccc;
     cursor: not-allowed;
 }
+
+.navbar {
+    background-color: #333;
+    padding: 0.5rem 0;  /* reduced from 1rem to 0.25rem */
+    margin-bottom: 5px;  /* reduced from 20px to 5px */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+.nav-links a.active {
+    background-color: #007bff;
+}
+
+.content {
+    padding-top: 5px;  /* reduced from 20px to 5px */
+}

@@ -1,27 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>File Upload</h1>
-        <div class="upload-container">
-            <div class="drop-zone" id="dropZone">
-                <p>Drag & Drop files here or</p>
-                <input type="file" id="fileInput" multiple>
-                <label for="fileInput" class="upload-btn">Choose Files</label>
-            </div>
-            <div class="file-list" id="fileList">
-                <h3>Uploaded Files:</h3>
-                <ul id="uploadedFiles"></ul>
-            </div>
-            <button id="uploadButton" class="upload-all-btn">Upload All Files</button>
+{% extends "base.html" %}
+
+{% block title %}File Upload{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>File Upload</h1>
+    <div class="upload-container">
+        <div class="drop-zone" id="dropZone">
+            <p>Drag & Drop files here or</p>
+            <input type="file" id="fileInput" multiple>
+            <label for="fileInput" class="upload-btn">Choose Files</label>
         </div>
+        <div class="file-list" id="fileList">
+            <h3>Uploaded Files:</h3>
+            <ul id="uploadedFiles"></ul>
+        </div>
+        <button id="uploadButton" class="upload-all-btn">Upload All Files</button>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
-</html>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

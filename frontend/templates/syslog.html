@@ -1,4 +1,12 @@
-<iframe 
-    src="http://35.188.64.84:5601/app/dashboards#/view/6e60ea0a-c4ad-416e-a2fa-18f68755d13b?_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-15m%2Cto%3Anow))&embed=true" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
-</iframe>
+{% extends "base.html" %}
+
+{% block title %}Syslog Dashboard{% endblock %}
+
+{% block content %}
+<div style="position: relative; height: calc(100vh - 60px);">
+    <iframe 
+        src="http://35.188.64.84:5601/app/dashboards#/view/6e60ea0a-c4ad-416e-a2fa-18f68755d13b?_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-15m%2Cto%3Anow))&embed=true" 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Log Analysis{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/" {% if request.endpoint == 'index' %}class="active"{% endif %}>Upload</a></li>
+                <li><a href="/syslog" {% if request.endpoint == 'syslog' %}class="active"{% endif %}>Syslog Dashboard</a></li>
+                <li><a href="/sysdlog" {% if request.endpoint == 'sysdlog' %}class="active"{% endif %}>Sysd Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
