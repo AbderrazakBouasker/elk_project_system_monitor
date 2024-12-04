@@ -28,9 +28,9 @@ services:
       #- ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./logstash/pipeline:/usr/share/logstash/pipeline
       - ./logfiles/auth.log:/usr/share/logstash/logs/auth.log
-      - ./logfiles/syslog:/usr/share/logstash/logs/syslog
+      - ./logfiles/syslog.log:/usr/share/logstash/logs/syslog
       - ./logfiles/kern.log:/usr/share/logstash/logs/kern.log
-      - ./logfiles/apt/history.log:/usr/share/logstash/logs/history.log
+      - ./logfiles/history.log:/usr/share/logstash/logs/history.log
       - ./logfiles/sysd.json:/usr/share/logstash/logs/sysd.json
     networks:
       - elk
