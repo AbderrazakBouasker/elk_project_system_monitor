@@ -27,11 +27,12 @@ services:
     volumes:
       #- ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./logstash/pipeline:/usr/share/logstash/pipeline
-      - ./logfiles/auth.log:/usr/share/logstash/logs/auth.log
-      - ./logfiles/syslog.log:/usr/share/logstash/logs/syslog
-      - ./logfiles/kern.log:/usr/share/logstash/logs/kern.log
-      - ./logfiles/history.log:/usr/share/logstash/logs/history.log
-      - ./logfiles/sysd.json:/usr/share/logstash/logs/sysd.json
+      - ./logfiles/:/usr/share/logstash/logs/
+      # - ./logfiles/auth.log:/usr/share/logstash/logs/auth.log
+      # - ./logfiles/syslog.log:/usr/share/logstash/logs/syslog
+      # - ./logfiles/kern.log:/usr/share/logstash/logs/kern.log
+      # - ./logfiles/history.log:/usr/share/logstash/logs/history.log
+      # - ./logfiles/sysd.json:/usr/share/logstash/logs/sysd.json
     networks:
       - elk
     depends_on:
