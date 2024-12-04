@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Store uploaded files
     const files = new Map();
+    const uploadedFilesSet = new Set(); // Add this to track uploaded files
 
     // Drag and drop handlers
     dropZone.addEventListener('dragover', (e) => {
@@ -38,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateUploadButtonState() {
-        uploadButton.disabled = files.size === 0;
+        const hasUnuploadedFiles = Array.from(files.keys()).some(filename => !uploadedFilesSet.has(filename));
+        uploadButton.disabled = files.size === 0 || !hasUnuploadedFiles;
     }
 
     uploadButton.addEventListener('click', async () => {
@@ -76,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const statusElement = fileElement.querySelector('.upload-status');
                     statusElement.textContent = 'Uploaded';
                 }
+                uploadedFilesSet.add(file.name); // Add file to uploaded set
+                updateUploadButtonState();
             } else {
                 console.error('Upload failed:', result.error);
                 // Update UI to show error
@@ -120,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Make removeFile function global
     window.removeFile = (fileName) => {
         files.delete(fileName);
+        uploadedFilesSet.delete(fileName); // Remove from uploaded set
         renderFileList();
         updateUploadButtonState();
     };
