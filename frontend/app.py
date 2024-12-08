@@ -1,8 +1,11 @@
 from flask import Flask, render_template, request, jsonify
-import os
-import random
+import os, random, time
 from datetime import datetime
 from elasticsearch import Elasticsearch
+import redis
+import json
+import hashlib
+import logging
 
 app = Flask(__name__)
 
@@ -35,6 +38,21 @@ def generate_unique_filename(original_filename):
 # Initialize Elasticsearch client
 es = Elasticsearch(hosts=["http://localhost:9200"])
 
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Redis configuration
+CACHE_EXPIRATION = 300  # 5 minutes
+MAX_CACHE_SIZE = 1000  # Maximum number of cached queries
+redis_client = redis.Redis(
+    host='localhost',
+    port=6379,
+    db=0,
+    decode_responses=True,
+    socket_timeout=2
+)
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -50,41 +68,92 @@ def syslog():
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     if request.method == 'POST':
+        start_time = time.time()
         query = request.form.get('query')
         log_type = request.form.get('log_type')
-        # Determine the Elasticsearch index based on log type
-        if log_type == "sysd":
-            index_name = "sysd-index-*"
-        elif log_type == "syslog":
-            index_name = "syslog-*"
-        elif log_type == "auth":
-            index_name = "auth-*"
-        elif log_type == "history":
-            index_name = "apt-history-*"
-        else:
-            index_name = "*"
 
-        # Perform search in Elasticsearch
-        search_body = {
-            "query": {
-                "query_string": {
-                    "query": query
-                }
+        cache_key = hashlib.md5(f"{query}:{log_type}".encode()).hexdigest()
+
+        try:
+            # Try to get from cache
+            cached_data = redis_client.get(cache_key)
+            if cached_data:
+                results = json.loads(cached_data)
+                field_names = results[0].keys() if results else []
+                response_time = time.time() - start_time
+                logger.info(f"Cache HIT - Query: {query} - Time: {response_time:.2f}s")
+                return render_template('search.html', 
+                                    results=results, 
+                                    field_names=field_names,
+                                    query=query, 
+                                    log_type=log_type, 
+                                    from_cache=True,
+                                    response_time=f"{response_time:.2f}")
+
+            # If not in cache, search Elasticsearch
+            if log_type == "sysd":
+                index_name = "sysd-index-*"
+            elif log_type == "syslog":
+                index_name = "syslog-*"
+            elif log_type == "auth":
+                index_name = "auth-*"
+            elif log_type == "history":
+                index_name = "apt-history-*"
+            else:
+                index_name = "*"
+
+            search_body = {
+                "query": {
+                    "query_string": {
+                        "query": query
+                    }
+                },
+                "size": 100  # Limit results to prevent huge cache entries
             }
-        }
-        res = es.search(index=index_name, body=search_body)
-        hits = res['hits']['hits']
-        results = [hit['_source'] for hit in hits]
 
-        # Get field names dynamically from the first result
-        if results:
-            field_names = results[0].keys()
-        else:
-            field_names = []
+            res = es.search(index=index_name, body=search_body)
+            hits = res['hits']['hits']
+            results = [hit['_source'] for hit in hits]
 
-        return render_template('search.html', results=results, field_names=field_names, query=query, log_type=log_type)
-    else:
-        return render_template('search.html')
+            # Cache the results if not empty
+            if results:
+                try:
+                    # Check cache size before adding new entry
+                    if redis_client.dbsize() >= MAX_CACHE_SIZE:
+                        # Remove oldest entry
+                        oldest_key = redis_client.keys()[0]
+                        redis_client.delete(oldest_key)
+
+                    redis_client.setex(
+                        cache_key,
+                        CACHE_EXPIRATION,
+                        json.dumps(results)
+                    )
+                except redis.RedisError as e:
+                    logger.error(f"Redis caching error: {e}")
+
+            field_names = results[0].keys() if results else []
+            response_time = time.time() - start_time
+            logger.info(f"Cache MISS - Query: {query} - Time: {response_time:.2f}s")
+
+            return render_template('search.html', 
+                                results=results, 
+                                field_names=field_names,
+                                query=query, 
+                                log_type=log_type, 
+                                from_cache=False,
+                                response_time=f"{response_time:.2f}")
+
+        except redis.RedisError as e:
+            logger.error(f"Redis error: {e}")
+            # Fallback to direct Elasticsearch query
+            # ...existing elasticsearch query code...
+
+        except Exception as e:
+            logger.error(f"Search error: {e}")
+            return render_template('search.html', error="Search failed. Please try again.")
+
+    return render_template('search.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_files():

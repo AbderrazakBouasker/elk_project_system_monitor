@@ -30,7 +30,15 @@
         <div class="results-container">
             <div class="results-header">
                 <h2>Search Results</h2>
-                <span class="results-count">Found {{ results|length }} results</span>
+                <div class="results-meta">
+                    <span class="results-count">Found {{ results|length }} results</span>
+                    {% if from_cache %}
+                        <span class="cache-indicator">from cache</span>
+                    {% endif %}
+                    {% if response_time %}
+                        <span class="response-time">{{ response_time }}s</span>
+                    {% endif %}
+                </div>
             </div>
             <div class="table-container">
                 <table class="result-table">
