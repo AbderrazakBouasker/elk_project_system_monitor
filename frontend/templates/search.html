@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}ElasticSearch Query{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+{% block content %}
+<!-- ...existing code... -->
+<div class="search-container">
+    <form method="post" action="/search" class="search-form">
+        <div class="search-inputs">
+            <div class="input-group">
+                <input type="text" name="query" placeholder="Enter search query" value="{{ query }}" required>
+            </div>
+            <div class="input-group">
+                <select name="log_type" class="log-type-select" required>
+                    <option value="" disabled {% if not log_type %}selected{% endif %}>Select log type</option>
+                    <option value="sysd" {% if log_type == 'sysd' %}selected{% endif %}>System D</option>
+                    <option value="syslog" {% if log_type == 'syslog' %}selected{% endif %}>System Log</option>
+                    <option value="auth" {% if log_type == 'auth' %}selected{% endif %}>Authentication</option>
+                    <option value="history" {% if log_type == 'history' %}selected{% endif %}>History</option>
+                </select>
+            </div>
+            <button type="submit" class="search-button">Search</button>
+        </div>
+    </form>
+
+    {% if results %}
+        <div class="results-container">
+            <div class="results-header">
+                <h2>Search Results</h2>
+                <span class="results-count">Found {{ results|length }} results</span>
+            </div>
+            <div class="table-container">
+                <table class="result-table">
+                    <thead>
+                        <tr>
+                            {% for field in field_names %}
+                                <th>{{ field | replace('_', ' ') | title }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for result in results %}
+                        <tr>
+                            {% for field in field_names %}
+                                <td class="cell-{{ field }}">{{ result[field] }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% elif query %}
+        <div class="no-results">
+            <p>No results found for "{{ query }}" in "{{ log_type }}" logs.</p>
+        </div>
+    {% endif %}
+</div>
+<!-- ...existing code... -->
+{% endblock %}

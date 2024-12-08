@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import os
 import random
 from datetime import datetime
+from elasticsearch import Elasticsearch
 
 app = Flask(__name__)
 
@@ -31,6 +32,9 @@ def generate_unique_filename(original_filename):
     random_number = str(random.randint(10000, 99999))
     return f"{name}_{timestamp}-{random_number}{ext}"
 
+# Initialize Elasticsearch client
+es = Elasticsearch(hosts=["http://localhost:9200"])
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -43,9 +47,44 @@ def sysdlog():
 def syslog():
     return render_template('syslog.html')
 
-@app.route('/search')
+@app.route('/search', methods=['GET', 'POST'])
 def search():
-    return render_template('search.html')
+    if request.method == 'POST':
+        query = request.form.get('query')
+        log_type = request.form.get('log_type')
+        # Determine the Elasticsearch index based on log type
+        if log_type == "sysd":
+            index_name = "sysd-index-*"
+        elif log_type == "syslog":
+            index_name = "syslog-*"
+        elif log_type == "auth":
+            index_name = "auth-*"
+        elif log_type == "history":
+            index_name = "history-*"
+        else:
+            index_name = "*"
+
+        # Perform search in Elasticsearch
+        search_body = {
+            "query": {
+                "query_string": {
+                    "query": query
+                }
+            }
+        }
+        res = es.search(index=index_name, body=search_body)
+        hits = res['hits']['hits']
+        results = [hit['_source'] for hit in hits]
+
+        # Get field names dynamically from the first result
+        if results:
+            field_names = results[0].keys()
+        else:
+            field_names = []
+
+        return render_template('search.html', results=results, field_names=field_names, query=query, log_type=log_type)
+    else:
+        return render_template('search.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_files():
