@@ -45,7 +45,9 @@
                         {% for result in results %}
                         <tr>
                             {% for field in field_names %}
-                                <td class="cell-{{ field }}">{{ result[field] }}</td>
+                                <td class="cell-{{ field }} truncate-cell" data-full-content="{{ result[field] }}">
+                                    <span class="truncated-content">{{ result[field] }}</span>
+                                </td>
                             {% endfor %}
                         </tr>
                         {% endfor %}
@@ -60,4 +62,7 @@
     {% endif %}
 </div>
 <!-- ...existing code... -->
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='search.js') }}"></script>
 {% endblock %}

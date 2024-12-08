@@ -316,3 +316,68 @@ li div {
         width: 100%;
     }
 }
+
+/* Truncated cell styles */
+.truncate-cell {
+    max-width: 300px;
+    position: relative;
+}
+
+.truncate-cell:not(.expanded) .truncated-content {
+    display: block;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.truncate-cell.expanded {
+    position: relative;
+    z-index: 1000;
+}
+
+.truncate-cell.expanded .truncated-content {
+    position: absolute;
+    left: 0;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    white-space: pre-wrap;
+    max-width: 800px;
+    max-height: 400px;
+    overflow-y: auto;
+    word-break: break-word;
+}
+
+/* Specific field styling adjustments */
+.cell-timestamp {
+    max-width: 150px !important;
+}
+
+.cell-program, 
+.cell-hostname {
+    max-width: 200px !important;
+}
+
+.cell-message {
+    max-width: 400px !important;
+}
+
+/* Add hover effect to indicate clickable cells */
+.truncate-cell:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+
+/* Style for cells that are too long */
+.truncate-cell:not(.expanded)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    background: linear-gradient(to right, transparent, #ffffff);
+    pointer-events: none;
+}

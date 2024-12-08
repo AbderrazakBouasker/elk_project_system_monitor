@@ -60,7 +60,7 @@ def search():
         elif log_type == "auth":
             index_name = "auth-*"
         elif log_type == "history":
-            index_name = "history-*"
+            index_name = "apt-history-*"
         else:
             index_name = "*"
 
