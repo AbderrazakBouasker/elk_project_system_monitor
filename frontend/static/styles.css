@@ -123,3 +123,23 @@ li div {
 .content {
     padding-top: 5px;  /* reduced from 20px to 5px */
 }
+
+/* File validation styles */
+.invalid-file {
+    margin: 5px 0;
+}
+
+.valid-file {
+    margin: 5px 0;
+}
+
+.invalid-file span {
+    margin-right: 10px;
+}
+
+/* Update existing upload button disabled state */
+.upload-all-btn:disabled,
+#uploadButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

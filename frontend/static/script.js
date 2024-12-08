@@ -8,6 +8,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const files = new Map();
     const uploadedFilesSet = new Set(); // Add this to track uploaded files
 
+    const validSubfolders = ['auth', 'history', 'sysd', 'syslog'];
+    const fileList = new Map();
+
+    function isValidFilename(filename) {
+        return validSubfolders.some(subfolder => filename.toLowerCase().includes(subfolder));
+    }
+
+    function updateUploadButton() {
+        const hasInvalidFiles = Array.from(fileList.values()).some(file => !file.isValid);
+        uploadButton.disabled = hasInvalidFiles;
+    }
+
+    function addFileToList(file) {
+        const isValid = isValidFilename(file.name);
+        fileList.set(file.name, { file, isValid });
+        
+        const li = document.createElement('li');
+        li.className = isValid ? 'valid-file' : 'invalid-file';
+        
+        const fileInfo = document.createElement('span');
+        fileInfo.textContent = file.name;
+        
+        if (!isValid) {
+            fileInfo.style.color = 'red';
+            const errorMsg = document.createElement('span');
+            errorMsg.textContent = ' - Invalid filename: must contain auth, history, sysd, or syslog';
+            errorMsg.style.color = 'red';
+            fileInfo.appendChild(errorMsg);
+        }
+        
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.onclick = () => {
+            fileList.delete(file.name);
+            li.remove();
+            updateUploadButton();
+        };
+        
+        li.appendChild(fileInfo);
+        li.appendChild(removeBtn);
+        uploadedFiles.appendChild(li);
+        updateUploadButton();
+    }
+
     // Drag and drop handlers
     dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
@@ -21,11 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
     dropZone.addEventListener('drop', (e) => {
         e.preventDefault();
         dropZone.classList.remove('dragover');
-        handleFiles(e.dataTransfer.files);
+        Array.from(e.dataTransfer.files).forEach(addFileToList);
     });
 
     fileInput.addEventListener('change', (e) => {
-        handleFiles(e.target.files);
+        Array.from(e.target.files).forEach(addFileToList);
     });
 
     async function handleFiles(fileList) {
@@ -46,17 +90,30 @@ document.addEventListener('DOMContentLoaded', () => {
     uploadButton.addEventListener('click', async () => {
         uploadButton.disabled = true;
         
-        for (const [fileName, file] of files) {
-            const fileElement = uploadedFiles.querySelector(`li[data-filename="${fileName}"]`);
-            if (fileElement) {
-                const statusElement = fileElement.querySelector('.upload-status');
-                statusElement.textContent = 'Uploading...';
-            }
-            
-            await uploadFile(file);
-        }
+        const validFiles = Array.from(fileList.values())
+            .filter(item => item.isValid)
+            .map(item => item.file);
         
-        updateUploadButtonState();
+        const formData = new FormData();
+        validFiles.forEach(file => formData.append('files[]', file));
+        
+        try {
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            // Handle response
+            if (result.message) {
+                alert(result.message);
+                uploadedFiles.innerHTML = '';
+                fileList.clear();
+                updateUploadButton();
+            }
+        } catch (error) {
+            console.error('Upload failed:', error);
+            alert('Upload failed');
+        }
     });
 
     async function uploadFile(file) {

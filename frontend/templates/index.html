@@ -2,6 +2,10 @@
 
 {% block title %}File Upload{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <h1>Upload Log Files</h1>

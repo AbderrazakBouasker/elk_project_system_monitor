@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import random
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -26,8 +27,9 @@ def get_subfolder(filename):
 
 def generate_unique_filename(original_filename):
     name, ext = os.path.splitext(original_filename)
+    timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
     random_number = str(random.randint(10000, 99999))
-    return f"{name}_{random_number}{ext}"
+    return f"{name}_{timestamp}-{random_number}{ext}"
 
 @app.route('/')
 def index():
@@ -40,6 +42,10 @@ def sysdlog():
 @app.route('/syslog')
 def syslog():
     return render_template('syslog.html')
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_files():
