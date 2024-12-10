@@ -10,7 +10,7 @@ import logging
 app = Flask(__name__)
 
 # Configure upload folders
-BASE_UPLOAD_FOLDER = '../logfiles'
+BASE_UPLOAD_FOLDER = '/app/logfiles'
 SUBFOLDERS = ['auth', 'history', 'sysd', 'syslog']
 
 # Create base folder and subfolders if they don't exist
@@ -36,7 +36,9 @@ def generate_unique_filename(original_filename):
     return f"{name}_{timestamp}-{random_number}{ext}"
 
 # Initialize Elasticsearch client
-es = Elasticsearch(hosts=["http://localhost:9200"])
+es_host = os.getenv('ELASTICSEARCH_HOST', 'elasticsearch')
+es_port = os.getenv('ELASTICSEARCH_PORT', '9200')
+es = Elasticsearch([f"http://{es_host}:{es_port}"])
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -46,8 +48,8 @@ logger = logging.getLogger(__name__)
 CACHE_EXPIRATION = 300  # 5 minutes
 MAX_CACHE_SIZE = 1000  # Maximum number of cached queries
 redis_client = redis.Redis(
-    host='localhost',
-    port=6379,
+    host=os.getenv('REDIS_HOST', 'redis'),
+    port=int(os.getenv('REDIS_PORT', 6379)),
     db=0,
     decode_responses=True,
     socket_timeout=2
@@ -120,7 +122,6 @@ def search():
                 try:
                     # Check cache size before adding new entry
                     if redis_client.dbsize() >= MAX_CACHE_SIZE:
-                        # Remove oldest entry
                         oldest_key = redis_client.keys()[0]
                         redis_client.delete(oldest_key)
 
