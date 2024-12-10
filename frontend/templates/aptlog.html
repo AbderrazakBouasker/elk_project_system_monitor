@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Apt History Dashboard{% endblock %}
+
+{% block content %}
+<div style="position: relative; height: calc(100vh - 60px);">
+    <iframe 
+        src="http://35.188.64.84:5601/app/dashboards#/view/f62cf58d-6039-496a-b395-1ffcfe22a6ca?_g=(refreshInterval%3A(pause%3A!t%2Cvalue%3A60000)%2Ctime%3A(from%3Anow-15m%2Cto%3Anow))&embed=true&show-top-nav=false&show-query-input=false&show-time-filter=false" 
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    </iframe>
+</div>
+{% endblock %}

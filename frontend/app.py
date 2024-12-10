@@ -67,6 +67,10 @@ def sysdlog():
 def syslog():
     return render_template('syslog.html')
 
+@app.route('/aptlog')
+def aptlog():
+    return render_template('aptlog.html')
+
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     if request.method == 'POST':
